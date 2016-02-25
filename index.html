@@ -1,29 +1,328 @@
 <!DOCTYPE html>
 <html>
-	<head>
-		<title>Open Data Delaware</title>
-		<style type="text/css">
-		<!--
-		.opedatade {
-			font-family: Tahoma, Geneva, sans-serif;
-		}
-		-->
-		</style>
-	</head>
-	<body>
-		<table width="100%" border="0" cellspacing="0" cellpadding="0">
-  <tbody><tr>
-    <td align="center"><p>&nbsp;</p>
-    <p>&nbsp;</p>
-    <p>&nbsp;</p>
-    <p>&nbsp;</p>
-    <p>&nbsp;</p>
-    <p>&nbsp;</p>
-    <p>&nbsp;</p>
-    <p><img src="dataDE.jpg" alt="Open Data Delaware"></p>
-<a href="mailto:info@openDataDE.org" class="opedatade">contact us</a>
-    <p>&nbsp;</p></td>
-  </tr>
-</tbody></table>
-<p>&nbsp;</p>
-</body></html>
+<head>
+	<title>Open Data Delaware</title>
+	<link href='https://fonts.googleapis.com/css?family=Roboto+Mono|Roboto:400,500,700,400italic,500italic,700italic' rel='stylesheet' type='text/css'>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+	<link href="https://netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.css" rel="stylesheet">
+	<style type="text/css">
+	<!--
+	* {
+		box-sizing:border-box;
+	}
+
+	a {
+		color: #d8ac6d;
+	}
+
+	a:hover {
+		text-decoration:none;
+	}
+
+	.container {
+		width:80%;
+	}
+
+	.btn {
+		text-decoration: none;
+	    text-align: center;
+	    font-size:1.3em;
+	    text-transform: uppercase;
+	    color: white;
+	    display: inline-block;
+	    padding: 5px;
+	    border: 5px solid white;
+	    width: auto;
+	    margin: 10px auto;
+	    border-radius:0px;
+	    text-shadow:none;
+	}
+
+	.navbar {
+		height:75px;
+		margin-bottom:0;
+		background-color:transparent;
+		border:0px;
+	}
+
+	.opedatade {
+		font-family: Roboto Mono, Tahoma, Geneva, sans-serif;
+	}
+	.oddelogo {
+		height: 125px;
+		margin-top: -12px;
+	}
+
+	#header {
+		background: 
+			linear-gradient(
+		      rgba(119, 161, 160, 0.75), 
+		      rgba(119, 161, 160, 0.75)
+		    ),
+		    /* bottom, image */
+		    url(img/legislativehall.jpg);
+		    background-size:100% auto;
+		    background-repeat:no-repeat;
+	}
+
+	#header div {
+		text-align: center;
+	}
+
+	.row.intro {
+		height:480px;
+		width:100%;
+		margin:0 auto;
+		overflow:auto;
+		display:flex;
+		justify-content:center;
+    	align-content:center;
+    	flex-direction:column; 
+	}
+
+	.introcontent {
+		color:white;
+		width:100%;
+		font-size:2em;
+		text-shadow:1px 1px black;
+	}
+
+	.featuredlinks.col-md-4 {
+		height:360px;
+		font-family:Roboto;
+		font-size:2em;
+		box-sizing:border-box;
+		padding:0;
+		text-align:center;
+	}
+
+	.social {
+		color: white;
+		text-shadow:1px 1px black;
+		display:block;
+		width:100%;
+		height:100%;
+		display: flex;
+    	justify-content:center;
+    	align-content:center;
+    	flex-direction:column;
+	}
+
+	.meetup {
+		background: 
+			linear-gradient(
+		      rgba(216, 172, 109, 0.45), 
+		      rgba(216, 172, 109, 0.45) 
+		    ),
+		    /* bottom, image */
+		    url(img/meetup.jpg);
+		background-size:cover;
+	}
+
+	.slack {
+		background: 
+			linear-gradient(
+		      rgba(216, 172, 109, 0.45), 
+		      rgba(216, 172, 109, 0.45) 
+		    ),
+		    /* bottom, image */
+		    url(img/markell.jpg);
+		background-size:cover;
+	}
+
+	.github {
+		background: 
+			linear-gradient(
+		      rgba(119, 161, 160, 0.45), 
+		      rgba(119, 161, 160, 0.45)
+		    ),
+		    /* bottom, image */
+		    url(img/github.jpg);
+		    background-size:cover;
+	}
+
+	.row.twitter {
+		padding-top:2em;
+		text-align:center;
+		background: 
+			linear-gradient(
+		      rgba(119, 161, 160, 0.60), 
+		      rgba(119, 161, 160, 0.60)
+		    ),
+		    /* bottom, image */
+		    url(img/market.jpg);
+		font-size:1.3em;
+		color:white;
+	}
+
+	#twitterFetcher ul {
+		list-style-type:none;
+		padding:0;
+	}
+
+	#twitterFetcher li {
+		padding-bottom:2em;
+	}
+
+	#twitterFetcher li:first-child {
+		padding-top:2em;
+	}
+
+	#twitterFetcher .user {
+		padding-bottom:1em;
+	}
+
+	#twitterFetcher .user img {
+		border-radius:50%;
+	}
+
+	#twitterFetcher a {
+		color:white;
+		text-decoration:none;
+	}
+
+	#twitterFetcher a:hover {
+		color: #d8ac6d;
+		text-shadow:1px 1px black;
+	}
+
+	.tweet {
+		overflow-wrap:break-word;
+	}
+
+	.tweet a {
+		padding:1px;
+		border-bottom:1px solid #d8ac6d;
+	}
+
+	.interact a {
+	margin: 0 10px;
+	}
+
+	.interact a, .timePosted a {
+		border-bottom:none;
+		text-decoration:none;
+	}
+
+	.interact a:hover, .timePosted a:hover {
+		background-color:transparent;
+	}
+
+	.twitter_reply_icon, .twitter_retweet_icon, .twitter_fav_icon {
+	    font-size:0px;
+	    display: inline-block;
+	    text-align: center;
+	    padding:4px;
+	    width:20px;
+	}
+
+	.twitter_reply_icon:before, .twitter_retweet_icon:before, .twitter_fav_icon:before {
+	    font-family: FontAwesome;
+	    font-style: normal;
+	    font-weight: normal;
+	    text-decoration: none;
+	    font-size: 18px;
+	    padding-right: 0.5em;
+	}
+
+	.twitter_reply_icon:before {
+	    content: '\f112';
+	}
+
+	.twitter_retweet_icon:before {
+	    content: '\f079';
+	}
+
+	.twitter_fav_icon:before {
+	    content: '\f005';
+	}
+
+	.row.contactus {
+		height:240px;
+		box-sizing:border-box;
+		background: 
+			linear-gradient(
+		      rgba(216, 172, 109, 0.45), 
+		      rgba(216, 172, 109, 0.45) 
+		    ),
+		    /* bottom, image */
+		    url(img/contact.jpg);
+		background-size:cover;
+		color:white;
+		text-shadow:1px 1px black;
+	}
+
+	.col-md-8.contactus, .col-md-4.contactus {
+		height:240px;
+		box-sizing:border-box;
+		text-align:center;
+		font-size:2em;
+		display: flex;
+    	justify-content:center;
+    	align-content:center;
+    	flex-direction:column;
+	}
+
+	body {
+		font-family:"Roboto";
+	}
+	-->
+	</style>
+</head>
+<body>
+	<header id="header">
+	<nav class="navbar navbar-default">
+	  <div class="container">		
+		  <div class="container-fluid">
+		    <div class="navbar-header">
+		      <a class="navbar-brand" href="#"><img src="Logo.png" class="oddelogo" alt="Open Data Delaware Logo"></img></a>
+		    </div>
+		    <!-- <ul class="nav navbar-nav navbar-right">
+		      <li class="active"><a href="#">Home</a></li>
+		      <li><a href="#">Page 1</a></li>
+		      <li><a href="#">Page 2</a></li> 
+		      <li><a href="#">Page 3</a></li> 
+		    </ul> -->
+		  </div>
+		</div>
+	</nav>
+	
+		<div class="row intro" >
+			<div class="introcontent"><p class="col-md-6 col-md-offset-3" >We're a group of people interested in exploring how we can interact with data to make positive change for local Delaware communities. We are civic-minded. We are developers. We are designers. We are beginners. We are experts. We are everything in-between. It doesn't matter how much experience you have, all you need is a willingness to learn and a desire to help your community. We'll meet regularly to work on projects and build community together.</p></div>
+		</div>
+	</header>
+	<main id="main-content">
+		<div class="row">
+			<div class="featuredlinks col-md-4">
+				<a class="social meetup" href="http://www.meetup.com/Open-Data-Delaware/" >
+					Come to our meetups!
+				</a>
+			</div>
+			<div class="featuredlinks col-md-4" >
+				<!--img class="center-block" src="dataDE.jpg" alt="Open Data Delaware" /-->
+				<a class="social inverse github" class="github">Fork a repository on Github</a>
+			</div>
+			<div class="featuredlinks col-md-4">
+				<a class="social slack" href="https://opendatadeslack.herokuapp.com/">
+					Join us on Slack!
+				</a>
+			</div>
+		</div>
+		<div class="row twitter">
+			<div class="container">
+				<h3><a class="btn" href="">Follow Us on Twitter</a></h3>
+				<div id="twitterFetcher"></div>
+			</div>
+		</div>
+		<div class="row contactus">
+			<div class="container">
+  				<div class="col-md-8 contactus">Interested in learning more about Open Data Delaware and getting involved? Shoot us an email.</div>
+  				<div class="col-md-4 contactus contact">
+  					<a href="#" class="btn">Contact Us</a>
+  				</div>
+  			</div>
+  		</div> 		
+	</main>
+    <script type="text/javascript" src="js/TwitterFetcher/js/twitterFetcher_min.js"></script>
+</body>
+</html>
